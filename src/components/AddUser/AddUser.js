@@ -3,19 +3,20 @@ import './AddUser.css';
 import axios from 'axios';
 
 const AddUser = () => {
+  
   const [userData, setUserData] = useState({
-    firstName: '',
-    lastName: '',
-    DOB: '',
-    password: '',
-    mobile: '',
-    maritalStatus: '',
-    bloodGroup: '',
-    weight: '',
-    height: '',
-    email: '',
-    higestQualification: '',
-    active: ''
+    firstName: 'Jitendra ',
+    lastName: 'sahu',
+    DOB: '08-11-2024',
+    password: '1234',
+    mobile: 8887603331,
+    maritalStatus: 'Single',
+    bloodGroup: 'A',
+    weight: 65,
+    height: 12,
+    email: 'jitendrasahu17996@gmail.com',
+    higestQualification: null,
+    active: false
   });
 
   const handleChange = (e) => {
