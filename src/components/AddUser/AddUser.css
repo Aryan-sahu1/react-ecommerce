@@ -1,0 +1,31 @@
+
+.user{
+    margin-top: 50px;
+    background-color: #fff;
+}
+.add-user{
+   
+       width: 60%;
+      margin: auto;
+    
+}
+input{
+    width: 85%;
+    outline: -webkit-focus-ring-color auto 0px !important;
+    padding: 0 10px;
+}
+
+.add-user button{
+    background-color: #fff;
+    border: 0;
+    border: 1px solid #000;
+    margin-top: 23px;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+.add-user select{
+    width: 85%;
+    padding: 5px 6px;
+    outline: -webkit-focus-ring-color auto 0px !important;
+
+}

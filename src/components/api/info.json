@@ -1,0 +1,188 @@
+{
+    "cards": [
+        {
+            "_id": 1,
+            "name": "Sales",
+            "icon": "bi bi-cart",
+            "amount": 145,
+            "percentage": 0.12,
+            "active": true
+        },
+        {
+            "_id": 2,
+            "name": "Revenue",
+            "icon": "bi bi-currency-dollar",
+            "amount": 3246,
+            "percentage": 0.08,
+            "active": false
+        },
+        {
+            "_id": 3,
+            "name": "Customers",
+            "icon": "bi bi-people",
+            "amount": 1244,
+            "percentage": -0.11,
+            "active": false
+        }
+    ],
+    "news": [
+        {
+            "_id": 1,
+            "img": "../assets/items/news-1.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Eveniet quas eligendi suscipit assumenda porro",
+            "category": "abc"
+        },
+        {
+            "_id": 2,
+            "img": "../assets/items/news-1.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Eveniet quas eligendi suscipit assumenda porro",
+            "category": "abc"
+        },
+        {
+            "_id": 3,
+            "img": "../assets/items/news-1.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Eveniet quas eligendi suscipit assumenda porro",
+            "category": "abc"
+        },
+        {
+            "_id": 4,
+            "img": "../assets/items/news-1.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Eveniet quas eligendi suscipit assumenda porro",
+            "category": "abc"
+        },
+        {
+            "_id": 5,
+            "img": "../assets/items/news-1.jpg",
+            "title": "Lorem ipsum dolor sit amet",
+            "subtitle": "Eveniet quas eligendi suscipit assumenda porro",
+            "category": "abc"
+        }
+    ],
+    "topselling": [
+        {
+            "_id": 1,
+            "preview": "../assets/items/product-1.jpg",
+            "name": "Eveniet quas eligendi",
+            "price": 64,
+            "sold": 124
+        },
+        {
+            "_id": 2,
+            "preview": "../assets/items/product-2.jpg",
+            "name": "Eveniet quas eligendi",
+            "price": 20,
+            "sold": 122
+        },
+        {
+            "_id": 3,
+            "preview": "../assets/items/product-3.jpg",
+            "name": "Eveniet quas eligendi",
+            "price": 34,
+            "sold": 140
+        },
+        {
+            "_id": 4,
+            "preview": "../assets/items/product-4.jpg",
+            "name": "Eveniet quas eligendi",
+            "price": 87,
+            "sold": 187
+        },
+        {
+            "_id": 5,
+            "preview": "../assets/items/product-5.jpg",
+            "name": "Eveniet quas eligendi",
+            "price": 898,
+            "sold": 12
+        }
+    ],
+    "recentsales": [
+        {
+            "_id": 1,
+            "number": "#2457",
+            "customer": "Brandon Jacob",
+            "product": "Ar presentation",
+            "price": 64,
+            "status": "Approved"
+        },
+        {
+            "_id": 2,
+            "number": "#2458",
+            "customer": "Laura Smith",
+            "product": "Graphic design",
+            "price": 80,
+            "status": "Pending"
+        },
+        {
+            "_id": 3,
+            "number": "#2459",
+            "customer": "Michael Green",
+            "product": "Marketing analysis",
+            "price": 120,
+            "status": "Approved"
+        },
+        {
+            "_id": 4,
+            "number": "#2460",
+            "customer": "Jessica Lee",
+            "product": "Web development",
+            "price": 200,
+            "status": "Approved"
+        },
+        {
+            "_id": 5,
+            "number": "#2461",
+            "customer": "Chris Wong",
+            "product": "UX/UI Design",
+            "price": 150,
+            "status": "Rejected"
+        }
+    ],
+    "recentactivity": [
+        {
+            "_id": 1,
+            "time": "32 min",
+            "color": "text-success",
+            "content": "Eveniet quas eligendi suscipit assumenda porro",
+            "highlight": "Eveniet quas"
+        },
+        {
+            "_id": 2,
+            "time": "42 min",
+            "color": "text-muted",
+            "content": "Eveniet quas eligendi suscipit assumenda porro",
+            "highlight": "Eveniet quas"
+        },
+        {
+            "_id": 3,
+            "time": "1 day",
+            "color": "text-primary",
+            "content": "Eveniet quas eligendi suscipit assumenda porro",
+            "highlight": "Eveniet quas"
+        },
+        {
+            "_id": 4,
+            "time": "3 days",
+            "color": "text-dark",
+            "content": "Eveniet quas eligendi suscipit assumenda porro",
+            "highlight": "Eveniet quas"
+        },
+        {
+            "_id": 5,
+            "time": "1 week",
+            "color": "text-info",
+            "content": "Eveniet quas eligendi suscipit assumenda porro",
+            "highlight": "Eveniet quas"
+        },
+        {
+            "_id": 6,
+            "time": "2 weeks",
+            "color": "text-warning",
+            "content": "Eveniet quas eligendi suscipit assumenda porro",
+            "highlight": "Eveniet quas"
+        }
+    ]
+}
