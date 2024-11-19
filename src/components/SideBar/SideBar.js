@@ -76,21 +76,21 @@ const Sidebar = () => {
                             data-bs-parent="#sidebar-nav"
                         >
                             <li>
-                            <a href="/AddUser" onClick={handleNavigate("/AddUser")}>
+                            <a  onClick={handleNavigate("/add-user")}>
                                     <i className='bi bi-circle'></i>
                                     <span>Add user</span>
                                 </a>
                             </li>
                             <li>
-                            <a href="/AddProduct" onClick={handleNavigate("/AddProduct")}>
+                            <a onClick={handleNavigate("/add-product")}>
                                     <i className='bi bi-circle'></i>
                                     <span>Add Product</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onClick={handleNavigate("/add-category")}>
                                     <i className='bi bi-circle'></i>
-                                    <span>Cancellation Form</span>
+                                    <span>Add Category</span>
                                 </a>
                             </li>
                         </ul>
@@ -112,15 +112,21 @@ const Sidebar = () => {
                             data-bs-parent="#sidebar-nav"
                         >
                             <li>
-                                <a href="#">
+                                <a onClick={handleNavigate("/user-list")}>
                                     <i className='bi bi-circle'></i>
-                                    <span>General Tables</span>
+                                    <span>User-List Table</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onClick={handleNavigate("/category-list")}>
                                     <i className='bi bi-circle'></i>
-                                    <span>Data Tables</span>
+                                    <span>Category-List Tables</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a onClick={handleNavigate("/product-list")}>
+                                    <i className='bi bi-circle'></i>
+                                    <span>Product-List Tables</span>
                                 </a>
                             </li>
 

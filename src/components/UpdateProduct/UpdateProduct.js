@@ -1,82 +1,87 @@
+import './UpdateProduct.css'
 import React, { useEffect, useState } from 'react'
-import axios from "axios";
-import './AddProduct.css'
-import { useNavigate } from 'react-router-dom';
-const AddProduct = () => {
-
-  const [productData, setProductData] = useState({
-    productName: "",
-    price: "",
-    discountPrice: "",
-    slugName: "",
-    description: "",
-    category_Id: "",
-    isActive: ""
-  });
-
-  const [userParentData, setUserParentData] = useState([]);
-  const navigate = useNavigate()
-  const handleNavigate = (path) => () => {
-    navigate(path);
-  };
-
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProductData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    const formattedData = {
-      ...productData,
-      price: parseInt(productData.price),
-      discountPrice: parseInt(productData.discountPrice),
-      category_Id: parseInt(productData.category_Id),
-      isActive: productData.isActive === "true",
-    };
-
-    e.preventDefault();
-
-    axios.
-      post("http://localhost:3000/product/create", formattedData, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        }
-      })
-      .then((res) => {
-        alert("form submitted")
-        console.log(res)
-      })
-      .catch((error) => {
-        if (error.code === "ERR_BAD_REQUEST") {
-        }
-        alert("please submit data properly")
-        console.log(productData)
+import axios from "axios"; 
+import { useNavigate, useParams } from 'react-router-dom';
+const UpdateProduct = () => {
+    const [productData, setProductData] = useState({
+        productName: "",
+        price: "",
+        discountPrice: "",
+        slugName: "",
+        description: "",
+        category_Id: "",
+        isActive: ""
       });
-  }
-  
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/category")
-      .then((res) => {
-        // Filter to remove duplicate slugnames
-        const uniqueCategories = res.data.filter(
-          (item, index, self) =>
-            index === self.findIndex((t) => t.slugname === item.slugname)
-        );
-        setUserParentData(uniqueCategories);
-      })
-      .catch((error) => {
-        console.error("Error fetching parent categories:", error);
-      });
-  }, []);
-  
+    
+      const [userParentData, setUserParentData] = useState([]);
+      const navigate = useNavigate()
+      const { id } = useParams();
+      const handleNavigate = (path) => () => {
+        navigate(path);
+      };
 
+      useEffect(()=>{
+        axios
+        .get(`http://localhost:3000/product/${id}`)
+        .then((res)=>{
+            setProductData(res.data.data)
+        })
+
+        axios
+        .get("http://localhost:3000/product")
+        .then((res) => {
+          setUserParentData(res.data);
+        })
+        .catch((err) => console.error("Error fetching parent categories:", err));
+      },[id])
+    
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setProductData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }))
+      }
+    
+      const handleSubmit = (e) => {
+        const formattedData = {
+          ...productData,
+          price: parseInt(productData.price),
+          discountPrice: parseInt(productData.discountPrice),
+          category_Id: parseInt(productData.category_Id),
+          isActive: productData.isActive === "true",
+        };
+    
+        e.preventDefault();
+    
+        axios.
+        patch(`http://localhost:3000/product/${id}`, formattedData, {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            }
+          })
+          .then((res) => {
+            alert("product updated successfully")
+            console.log(res)
+            navigate('/product-list');
+          })
+          .catch((error) => {
+            if (error.code === "ERR_BAD_REQUEST") {
+            }
+            alert("please submit data properly")
+            console.log(productData)
+          });
+      }
+      
+       
   return (
+   
     <>
+
+
+ 
+ 
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -84,7 +89,7 @@ const AddProduct = () => {
               <div className='add-product'>
                 <div className="add-product-heading">
                   <div>
-                    <h2>Add product Details</h2>
+                    <h2>Update product Details</h2>
                   </div>
                   <div className='product-list-add'>
                     <a onClick={handleNavigate("/product-list")}><span><i className="fa-solid fa-bars"></i></span>Product-list</a>
@@ -170,11 +175,11 @@ const AddProduct = () => {
                         required
                       >
                          <option value="0">Null</option>
-                    {userParentData.map((item) => (
-                      <option key={item.id} value={item.id}>
-                        {item.slugname}
-                      </option>
-                    ))}
+                         {userParentData.map((item) => (
+                    <option key={item.id} value={item.id}>
+                      {item.category_Id || `Category ${item.id}`}
+                    </option>
+                  ))}
 
                       </select>
                     </div> 
@@ -205,9 +210,15 @@ const AddProduct = () => {
 
           </div>
         </div>
-      </div>
+      </div> 
+
+
+
+
+
+
     </>
   )
 }
 
-export default AddProduct
+export default UpdateProduct

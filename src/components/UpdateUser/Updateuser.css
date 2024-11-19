@@ -47,12 +47,7 @@ input {
     gap: 80px;
     padding-right: 124px;
 }
-.filter-section a{
-    background: #00abff82;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #000;
-}
+
 
 
 
@@ -81,4 +76,4 @@ input {
 .add-user-top{
     margin-left: 26vh;
     width: 100%;
-}
+}               

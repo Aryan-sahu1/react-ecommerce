@@ -1,0 +1,14 @@
+.product-table{
+        margin-top: 70px;
+        margin-left: 44vh;
+
+transition: 0.4s;
+}
+.toggle-sidebar .product-table{
+    margin-left: 0;
+}
+
+.action-btn-product div{
+    display: flex ;
+        justify-content: space-evenly;
+}

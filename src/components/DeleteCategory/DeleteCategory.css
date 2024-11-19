@@ -1,0 +1,41 @@
+.delete-user{
+    align-items: center;
+    /* width: 40%; */
+    background-color: #756a6a42;
+    margin: auto;
+    height: 90vh;
+    margin-top: 55px;
+    /* background-color: #fff; */
+    overflow: auto;
+}
+
+.delete-user-below{
+       background: #fff;
+       width: 40%;
+       margin-top: 23vh !important;
+       margin-left: 87vh;
+       transition: 0.4s ease-in-out;
+       padding: 40px 10px;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.toggle-sidebar .delete-user-below{
+    margin: auto;
+    
+}
+.delete-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 61px;
+}
+.delete-btn button:first-of-type {
+    border: 0; /* Add border width and style */
+    padding: 5px 16px;
+    border-radius: 6px;
+    background-color: blue;
+}
+.delete-btn button:nth-of-type(2) {
+    border: 0;
+    padding: 5px 16px;
+    border-radius: 6px;
+    background-color: #ff001a; /* Example for the second button */
+}

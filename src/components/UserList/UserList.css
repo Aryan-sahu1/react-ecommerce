@@ -1,0 +1,18 @@
+.user-list {
+    margin-top: 55px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.user-list-below {
+
+    padding: 32px;
+    margin-left: 47vh;
+    overflow-x: auto;
+
+}
+
+.toggle-sidebar .user-list-below {
+    margin-left: 0;
+}
+
