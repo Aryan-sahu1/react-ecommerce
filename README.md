@@ -21,6 +21,12 @@ $ npm start
 
 ```
 
+```bash
+# Project description
+ $ This project is mainly made from react js and nest js. This project has an e-commerce admin dashboard in which the user will sign in and login and add his product, the user can also add category.
+I am still working on this project, I think you will get what you need from this project. I have created a very smart dashboard but the UI is very good.
+
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
